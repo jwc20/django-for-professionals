@@ -170,3 +170,6 @@ STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+DEBUG = env.bool("DJANGO_DEBUG")
+# ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
