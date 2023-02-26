@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     # Third-party 
     "crispy_forms",
     "crispy_bootstrap5",
+    "allauth",
+    "allauth.account",
+
 
 
     # Local
@@ -48,6 +51,8 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",
 ]
 
+# django-allauth config 
+SITE_ID = 1
 
 
 MIDDLEWARE = [
