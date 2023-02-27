@@ -1,35 +1,18 @@
-# Chapter 9: Environment Variables
+# Chapter 10: Email
 
-## About
 
-- Environment variables are variables that can be loaded into the operating environment of a project at run time as opposed to hard coded into the codebase itself.
-- They allow a greater level of security and simpler local/production configurations.
-- Environment variables make it much easier to switch between local and production code environments.
+- In this chapter we will fully configure email and add password change and password reset functionality. 
 
-## Instructions
 
-- Install environs.
+## Instructions 
 
 ```
-docker-compose down
-docker-compose up -d --build
+mkdir templates/account/email
+vi templates/account/email/email_confirmation_subject.txt
+vi templates/account/email/email_confirmation_message.txt
 ```
+- Modify email_confirmation_subject.
+- Modify email_confirmation_message.
+- Update sites domain name in admin panel sites.
 
-- Update settings to use environs.
-  - Import Env.
-- Add django secret key to environment in docker-compose.yml.
-- Update SECRET_KEY in settings to use key in docker-compose.yml. (144)
 
-```
-docker-compose down
-docker-compose up -d
-```
-
-- Updated settings to use DJANGO_DEBUG in docker-compose.yml.
-- Set DJANGO_DEBUG to true in docker-compose.yml environment variable.
-- Updated DATABASE in settings to use the config in docker-compose.yml.
-
-```
-docker-compose down
-docker-compose up -d
-```
