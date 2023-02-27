@@ -1,4 +1,4 @@
-{:CocComannd htmldjango.builtin.installTools% extends "_base.html" %}
+{% extends "_base.html" %}
 {% load i18n %}
 {% load account %}
 {% block head_title %}
@@ -21,7 +21,7 @@
         {% url 'account_email' as email_url %}
         <p>
             {% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.\
-    {% endblocktrans %}
+{% endblocktrans %}
         </p>
     {% endif %}
 {% endblock %}
