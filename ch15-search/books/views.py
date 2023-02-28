@@ -4,6 +4,8 @@ from django.contrib.auth.mixins import (
 )
 from django.views.generic import ListView, DetailView
 
+from django.db.models import Q 
+
 from .models import Book
 
 
@@ -31,3 +33,8 @@ class SearchResultsListView(ListView):
     context_object_name = "book_list"
     template_name = "books/search_results.html"
     queryset = Book.objects.filter(title__icontains="1")
+
+    def get_queryset(self):
+        return Book.objects.filter(
+            Q(title__icontains="Lord") | Q(author__icontains="tolkiens")
+        )
