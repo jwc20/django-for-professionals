@@ -4,7 +4,7 @@
 {% endblock title %}
 {% block content %}
     <div class="book-detail">
-        <img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">
+        {% if book.cover %}<img class="bookcover" src="{{ book.cover.url }}" alt="{{ book.title }}">{% endif %}
         <h2>
             <a href="">{{ book.title }}</a>
         </h2>
