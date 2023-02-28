@@ -1,20 +1,25 @@
-# Chapter 15: Search
+# Chapter 16: Performance
 
 ## About
 
-In this chapter we will learn how to implement basic search with forms and filters. Then we will improve it with additional logic and touch upon ways to go even more deeply with search options in Django. We only have three books in our database now but the code here will scale to as many books as we’d like.
-
 ## Instructions
 
-- Update books app urls to include search endpoint.
-  - Import SearchResultListView.
-- Update books app views to connect to search_results template.
-- Created search_results template in books app.
-- Update books app views to filter a certain string.
-- Update bokos app views to filter multiple strings. (225)
+- Install django-debug-toolbar.
+- Update settings to add debug toolbar.
+- Add urlpattern to add debug toolbar.
 
-  - Import Q objects.
+- Use the toolbar and click SQL in one of the books. (book details)
 
-- Search Form:
-  - Update book app base template to add search form in nav bar.
-  - Update book app views to filter by input string from search form.
+  - Observe the “N+1 Queries problem.” (241)
+  - We want to update this to prefetch_related all the reviews for each author in one go.
+    - Update book app views, BookDetailView.
+
+- Update book models in class Meta to add index field.
+
+```
+docker-compose exec web python manage.py makemigrations books
+docker-compose exec web python manage.py migrate
+```
+
+
+- Update settings to add caching.
