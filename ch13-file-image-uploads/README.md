@@ -7,3 +7,18 @@
 ## Instructions
 
 - Install Pillow.
+- Add MEDIA_URL and MEDIA_ROOT to settings.
+
+```
+mkdir media
+mkdir media/covers
+```
+
+- Update project-level urls to include files locally. (197)
+- Add covers property to book model. (199)
+
+```
+docker-compose exec web python manage.py makemigrations books
+```
+
+- Update book detail template to show cover image.
