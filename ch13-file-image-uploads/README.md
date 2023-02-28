@@ -1,15 +1,9 @@
-# Chatper 12: Review App
+# Chatper 13: File/Image Uploads
 
 ## About
 
-- In this chapter we’ll add a reviews app so that readers can leave reviews of their favorite books. It gives us a chance to discuss foreign keys, app structure, and dive into forms.
+- This chapter demonstrated how to add user files to a project. In practice it is straightforward, but the additional layer of security concerns makes it an area worthy of focus at scale.
 
 ## Instructions
 
-- Create Review model in books app.
-  - Import get_user_model.
-- Migrate
-
-- Add review model to admin panel specifying display of TabularInline.
-- Add list of reviews to book detail template.
-- Update books app test to add review test.
+- Install Pillow.
