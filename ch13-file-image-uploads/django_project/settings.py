@@ -170,3 +170,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 DEBUG = env.bool("DJANGO_DEBUG")
 
 DEFAULT_FROM_EMAIL = "admin@djangobookstore.com"
+
+MEDIA_ URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
